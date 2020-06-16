@@ -16580,10 +16580,12 @@ Ingenieurbüro ing-rb, mail@ing-rb.de&lt;/p&gt;</description>
 <class number="0" name="default" width="0" drill="0">
 </class>
 <class number="1" name="supply" width="0.254" drill="0">
-<clearance class="1" value="0.1778"/>
+<clearance class="1" value="0.127"/>
 </class>
 <class number="2" name="signal" width="0.254" drill="0">
 <clearance class="2" value="0.254"/>
+</class>
+<class number="3" name="thermal" width="0" drill="0">
 </class>
 </classes>
 <parts>
@@ -16711,6 +16713,7 @@ Ingenieurbüro ing-rb, mail@ing-rb.de&lt;/p&gt;</description>
 <part name="Q19" library="transistor-npn" library_urn="urn:adsk.eagle:library:398" deviceset="BC817*" device="SMD" package3d_urn="urn:adsk.eagle:package:28748/2" technology="-40LT1"/>
 <part name="R46" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="4.7k"/>
 <part name="R47" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="800"/>
+<part name="GND22" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -17229,6 +17232,9 @@ Ingenieurbüro ing-rb, mail@ing-rb.de&lt;/p&gt;</description>
 <attribute name="NAME" x="-128.0414" y="-54.61" size="1.778" layer="95" rot="R270"/>
 <attribute name="VALUE" x="-132.842" y="-54.61" size="1.778" layer="96" rot="R270"/>
 </instance>
+<instance part="GND22" gate="1" x="182.88" y="48.26" smashed="yes">
+<attribute name="VALUE" x="180.34" y="45.72" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 <bus name="B$1,FF_SIG,FN_SIG,LASER_SIG,PRW_SIG,SET_SIG">
@@ -17471,7 +17477,7 @@ Ingenieurbüro ing-rb, mail@ing-rb.de&lt;/p&gt;</description>
 <label x="312.42" y="-83.82" size="1.778" layer="95" rot="R180"/>
 </segment>
 </net>
-<net name="GND" class="0">
+<net name="GND" class="1">
 <segment>
 <pinref part="S1" gate="G$1" pin="0@B"/>
 <pinref part="GND2" gate="1" pin="GND"/>
@@ -17640,6 +17646,13 @@ Ingenieurbüro ing-rb, mail@ing-rb.de&lt;/p&gt;</description>
 <pinref part="GND21" gate="1" pin="GND"/>
 <wire x1="365.76" y1="-86.36" x2="360.68" y2="-86.36" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="S3" gate="G$1" pin="0@B"/>
+<pinref part="S3" gate="G$1" pin="0@A"/>
+<wire x1="182.88" y1="55.88" x2="182.88" y2="50.8" width="0.1524" layer="91"/>
+<pinref part="GND22" gate="1" pin="GND"/>
+<junction x="182.88" y="50.8"/>
+</segment>
 </net>
 <net name="SETSW" class="2">
 <segment>
@@ -17713,6 +17726,7 @@ Ingenieurbüro ing-rb, mail@ing-rb.de&lt;/p&gt;</description>
 <junction x="233.68" y="101.6"/>
 <pinref part="R3" gate="G$1" pin="2"/>
 <junction x="220.98" y="101.6"/>
+<label x="220.98" y="101.6" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="+24V" class="0">
@@ -17907,13 +17921,6 @@ Ingenieurbüro ing-rb, mail@ing-rb.de&lt;/p&gt;</description>
 <wire x1="193.04" y1="33.02" x2="180.34" y2="33.02" width="0.1524" layer="91"/>
 <wire x1="193.04" y1="30.48" x2="193.04" y2="33.02" width="0.1524" layer="91"/>
 <junction x="193.04" y="33.02"/>
-</segment>
-</net>
-<net name="N$3" class="0">
-<segment>
-<pinref part="S3" gate="G$1" pin="0@B"/>
-<pinref part="S3" gate="G$1" pin="0@A"/>
-<wire x1="182.88" y1="55.88" x2="182.88" y2="50.8" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$6" class="0">
