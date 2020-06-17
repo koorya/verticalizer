@@ -7067,6 +7067,8 @@ drill 1.0 mm</description>
 <part name="+24" library="solpad" library_urn="urn:adsk.eagle:library:364" deviceset="LSP10" device="" package3d_urn="urn:adsk.eagle:package:26501/1"/>
 <part name="OUT" library="solpad" library_urn="urn:adsk.eagle:library:364" deviceset="LSP10" device="" package3d_urn="urn:adsk.eagle:package:26501/1"/>
 <part name="GND" library="solpad" library_urn="urn:adsk.eagle:library:364" deviceset="LSP10" device="" package3d_urn="urn:adsk.eagle:package:26501/1"/>
+<part name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R2512" package3d_urn="urn:adsk.eagle:package:23545/2" value="150"/>
+<part name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R2512" package3d_urn="urn:adsk.eagle:package:23545/2" value="150"/>
 </parts>
 <sheets>
 <sheet>
@@ -7123,11 +7125,19 @@ drill 1.0 mm</description>
 <instance part="+24" gate="1" x="43.18" y="53.34" smashed="yes" rot="R270">
 <attribute name="NAME" x="46.101" y="54.61" size="1.778" layer="95" rot="R270"/>
 </instance>
-<instance part="OUT" gate="1" x="68.58" y="33.02" smashed="yes" rot="R270">
-<attribute name="NAME" x="71.501" y="34.29" size="1.778" layer="95" rot="R270"/>
+<instance part="OUT" gate="1" x="91.44" y="33.02" smashed="yes" rot="R270">
+<attribute name="NAME" x="94.361" y="34.29" size="1.778" layer="95" rot="R270"/>
 </instance>
 <instance part="GND" gate="1" x="43.18" y="0" smashed="yes" rot="R270">
 <attribute name="NAME" x="46.101" y="1.27" size="1.778" layer="95" rot="R270"/>
+</instance>
+<instance part="R1" gate="G$1" x="60.96" y="33.02" smashed="yes">
+<attribute name="NAME" x="57.15" y="34.5186" size="1.778" layer="95"/>
+<attribute name="VALUE" x="57.15" y="29.718" size="1.778" layer="96"/>
+</instance>
+<instance part="R2" gate="G$1" x="76.2" y="33.02" smashed="yes">
+<attribute name="NAME" x="72.39" y="34.5186" size="1.778" layer="95"/>
+<attribute name="VALUE" x="72.39" y="29.718" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>
@@ -7182,10 +7192,10 @@ drill 1.0 mm</description>
 <pinref part="Q6" gate="G$1" pin="C"/>
 <wire x1="40.64" y1="38.1" x2="40.64" y2="33.02" width="0.1524" layer="91"/>
 <wire x1="40.64" y1="33.02" x2="40.64" y2="27.94" width="0.1524" layer="91"/>
-<wire x1="40.64" y1="33.02" x2="66.04" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="40.64" y1="33.02" x2="55.88" y2="33.02" width="0.1524" layer="91"/>
 <junction x="40.64" y="33.02"/>
 <pinref part="LED7" gate="G$1" pin="A"/>
-<pinref part="OUT" gate="1" pin="MP"/>
+<pinref part="R1" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="N$10" class="0">
@@ -7222,6 +7232,20 @@ drill 1.0 mm</description>
 <pinref part="Q13" gate="G$1" pin="C"/>
 <wire x1="5.08" y1="43.18" x2="12.7" y2="43.18" width="0.1524" layer="91"/>
 <pinref part="R13" gate="G$1" pin="2"/>
+</segment>
+</net>
+<net name="N$1" class="0">
+<segment>
+<pinref part="R1" gate="G$1" pin="2"/>
+<pinref part="R2" gate="G$1" pin="1"/>
+<wire x1="71.12" y1="33.02" x2="66.04" y2="33.02" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$2" class="0">
+<segment>
+<pinref part="OUT" gate="1" pin="MP"/>
+<pinref part="R2" gate="G$1" pin="2"/>
+<wire x1="81.28" y1="33.02" x2="88.9" y2="33.02" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
