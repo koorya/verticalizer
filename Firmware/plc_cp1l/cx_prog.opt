@@ -178,42 +178,42 @@ ProjectTree:=
 BEGIN
  Item[0]:=0;
  Item[1]:=2;
- Item[2]:=13;
- Item[3]:=14;
+ Item[2]:=12;
+ Item[3]:=13;
  ItemCount:=4;
  Sumcheck:=48;
- Selected:=23;
+ Selected:=22;
 END;
 Frame[0]:=
 BEGIN
- Norm:="0000 0000 0932 0375";
+ Norm:="0182 0182 1536 0645";
  Min:="-001 -001";
- Access:="PROGRAM:НовыйПроект.Ресурсы.NewResource1.Задачи.НоваяЗадача1.Сегменты.Сегмент1!Сегмент1";
- Type:=1;
+ Path:="C:\Users\Puakt\Documents\EAGLE\projects\verticalizer\Firmware\plc_cp1l\cx_prog.cxp";
+ Access:="PROJECT:!НовыйПроект.Ресурсы.NewResource1.Символы";
+ Type:=3;
  Views:=
  BEGIN
   View[0]:=
   BEGIN
+   Mag:=1;
+   Extra:=
+   BEGIN
+    Type:="CSymbolTableListCtrlState";
+    Style:=1;
+    NumCols:=7;
+    Width[0]:=150;
+    Width[1]:=90;
+    Width[2]:=100;
+    Width[3]:=1;
+    Width[4]:=84;
+    Width[5]:=48;
+    Width[6]:=200;
+   END;
   END;
   nViews:=1;
  END;
 END;
 Frame[1]:=
-BEGIN
- Norm:="0000 0000 1354 0463";
- Min:="-001 -001";
- Access:="PROGRAM:НовыйПроект.Ресурсы.NewResource1.Задачи.НоваяЗадача1.Сегменты.включение_прибора!включение_прибора";
- Type:=1;
- Views:=
- BEGIN
-  View[0]:=
-  BEGIN
-   Yscroll:=7;
-  END;
-  nViews:=1;
- END;
-END;
-Frame[2]:=
 BEGIN
  Norm:="0156 0156 1510 0619";
  Min:="-001 -001";
@@ -243,21 +243,7 @@ BEGIN
   nViews:=1;
  END;
 END;
-Frame[3]:=
-BEGIN
- Norm:="0026 0026 1380 0489";
- Min:="-001 -001";
- Access:="PROGRAM:НовыйПроект.Ресурсы.NewResource1.Задачи.НоваяЗадача1.Сегменты.поворот_1!поворот_1";
- Type:=1;
- Views:=
- BEGIN
-  View[0]:=
-  BEGIN
-  END;
-  nViews:=1;
- END;
-END;
-Frame[4]:=
+Frame[2]:=
 BEGIN
  Norm:="0182 0182 1536 0645";
  Min:="-001 -001";
@@ -271,7 +257,7 @@ BEGIN
   nViews:=1;
  END;
 END;
-Frame[5]:=
+Frame[3]:=
 BEGIN
  Norm:="0208 0208 1562 0671";
  Min:="-001 -001";
@@ -281,12 +267,70 @@ BEGIN
  BEGIN
   View[0]:=
   BEGIN
-   Yscroll:=12;
+   Yscroll:=10;
+  END;
+  nViews:=1;
+ END;
+END;
+Frame[4]:=
+BEGIN
+ Norm:="0026 0026 1380 0489";
+ Min:="-001 -001";
+ Access:="PROGRAM:НовыйПроект.Ресурсы.NewResource1.Задачи.НоваяЗадача1.Сегменты.поворот_1!поворот_1";
+ Type:=1;
+ Views:=
+ BEGIN
+  View[0]:=
+  BEGIN
+  END;
+  nViews:=1;
+ END;
+END;
+Frame[5]:=
+BEGIN
+ Norm:="0208 0208 1562 0671";
+ Min:="-001 -001";
+ Access:="PROGRAM:НовыйПроект.Ресурсы.NewResource1.Задачи.НоваяЗадача1.Сегменты.ожидание_стабилизации_1!ожидание_стабилизации_1";
+ Type:=1;
+ Views:=
+ BEGIN
+  View[0]:=
+  BEGIN
+   Yscroll:=6;
   END;
   nViews:=1;
  END;
 END;
 Frame[6]:=
+BEGIN
+ Norm:="0000 0000 0932 0375";
+ Min:="-001 -001";
+ Access:="PROGRAM:НовыйПроект.Ресурсы.NewResource1.Задачи.НоваяЗадача1.Сегменты.Сегмент1!Сегмент1";
+ Type:=1;
+ Views:=
+ BEGIN
+  View[0]:=
+  BEGIN
+  END;
+  nViews:=1;
+ END;
+END;
+Frame[7]:=
+BEGIN
+ Norm:="0000 0000 1354 0463";
+ Min:="-001 -001";
+ Access:="PROGRAM:НовыйПроект.Ресурсы.NewResource1.Задачи.НоваяЗадача1.Сегменты.включение_прибора!включение_прибора";
+ Type:=1;
+ Views:=
+ BEGIN
+  View[0]:=
+  BEGIN
+   Yscroll:=9;
+  END;
+  nViews:=1;
+ END;
+END;
+Frame[8]:=
 BEGIN
  Max:=true;
  Norm:="0052 0052 1406 0515";
@@ -297,12 +341,12 @@ BEGIN
  BEGIN
   View[0]:=
   BEGIN
-   Yscroll:=27;
+   Yscroll:=15;
   END;
   nViews:=1;
  END;
 END;
-nFrames:=7;
+nFrames:=9;
 WatchWindow:=
 BEGIN
  NumWatch:=3;
