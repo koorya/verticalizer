@@ -1,0 +1,3 @@
+[submodule ".\\Firmware\\python\\fins_interface"]
+	path = .\\Firmware\\python\\fins_interface
+	url = C:\\programming\\fins\\
