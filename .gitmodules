@@ -1,0 +1,3 @@
+[submodule "Firmware/python"]
+	path = Firmware/python
+	url = https://github.com/koorya/python_fins
